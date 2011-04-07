@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                
+        <!--        <link rel="stylesheet" href="css/main.css" type="text/css"/>-->
+        <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+        <script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8">
+        </script>
+        <script src="js/phonegap.0.9.4.js" type="text/javascript" charset="utf-8">
+        </script>
+        <script src="js/localStorage/LocalStorageDatabase.js" type="text/javascript" charset="utf-8">
+        </script>
+        <script type='application/javascript' src='js/iscroll-min.js'>
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                //   alert('ready');
+                if (existsData('Profile')) {
+                    $(location).attr('href', '../../20S_ClientURL/AddFriends.html');
+                }
+            });
+        </script>
+        <script type="text/javascript"> 
+            /* Local JavaScript Here */
+			var myScroll;
+			function loaded() {
+				 setTimeout(function () {
+				  myScroll = new iScroll('scroller', {desktopCompatibility:true});
+				 }, 100);
+			} 
+            document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+            document.addEventListener('DOMContentLoaded', loaded, false);
+
+			function callJanRain(){ 
+        //         window.location = "https://login.twentyat.com/facebook/connect_start?token_url=http://192.168.1.100:8080/20S_ClientURL/AddFriends.html&ext_perm=email";
+               window.location="https://login.twentyat.com/facebook/connect_start?token_url=http://ec2-50-16-41-243.compute-1.amazonaws.com:8080/20S_ClientURL/AddFriends.html&ext_perm=publish_stream,email,offline_access";
+            }
+        </script>
+		<style type="text/css">
+			#main{
+				height:100%;
+	            position:relative;
+	            z-index:1;
+	            width:100%;
+	            overflow:hidden;
+				background-color:#dfdfdf ;
+			}
+		</style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="scroller">
+            	<div>
+	                <div class="bghome">
+	                    <img src="images/20@bg.png" class="img" />
+	                </div>
+	                <div id="start" class="FBlogin">
+	                    <p>
+	                        Welcome to 20@. It's your own personal social network - for your 20 closest friends and family.
+	                    </p>
+	                    <a href="#" id="connect" onclick="callJanRain();"><img src="images/connect_fbook.png" class="img" alt="Connect with Facebook" /></a>
+	                    <div id="status">
+	                    </div>
+	                </div>
+		</div>
+            </div>
+        </div>
+
+        
+    </body>
+</html>

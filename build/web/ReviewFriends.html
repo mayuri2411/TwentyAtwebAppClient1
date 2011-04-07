@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/jquery.mobile-1.0a4.css" />
+	<script src="js/iscroll.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+            function generatePage(){
+                alert('generate Page');
+
+                var divRevFrnd=document.createElement("div");
+                divRevFrnd.setAttribute("id", "divRevFrnd");
+
+                var divRevFrndImg=document.createElement("div");
+                divRevFrndImg.setAttribute("id", "divRevFrndImg");
+
+                var FrndImg=document.createElement("img");
+                FrndImg.setAttribute("id", "FrndImg");
+                FrndImg.setAttribute("src", "images/pattern.png");
+
+                divRevFrnd.appendChild(FrndImg);
+
+                var divRevFrndTxtCnt=document.createElement("div");
+                divRevFrndTxtCnt.setAttribute("divRevFrndTxtCnt");
+
+                var ulListView=document.createElement("ul");
+                ulListView.setAttribute("id","ulListView");
+                ulListView.setAttribute("data-role","listview");
+                ulListView.setAttribute("data-inset","true");
+
+                var liNameText=document.createElement("li");
+                liNameText.setAttribute("id", "liNameText");
+                liNameText.setAttribute("data-theme", "c");
+                
+                var divNameCont=document.createElement("div");
+                divNameCont.setAttribute("id", "divNameCont");
+                
+                var fbNameTxt=document.createElement("div");
+                fbNameTxt.setAttribute("id", "fbNameTxt");
+
+                var linkFbName=document.createElement("a");
+                linkFbName.setAttribute("id", "linkFbName");
+
+                fbNameTxt.appendChild(linkFbName);
+
+                var spnMinus=document.createElement("span");
+                spnMinus.setAttribute("id", "spnMinus");
+                spnMinus.setAttribute("data-theme", "c");
+
+                liNameText.appendChild(divNameCont);
+                liNameText.appendChild(fbNameTxt);
+                liNameText.appendChild(spnMinus);
+
+                ulListView.appendChild(liNameText);
+                divRevFrndTxtCnt.appendChild(divRevFrndTxtCnt);
+
+                divRevFrnd.appendChild(divRevFrndImg);
+                divRevFrnd.appendChild(divRevFrndTxtCnt);
+
+                var wrapDiv=document.getElementById("wrapper");
+                wrapDiv.appendChild(divRevFrnd); 
+                //$('#fbfriendlist'+index).addClass("div-add-friend");
+                
+                
+            }
+
+
+
+
+
+
+//   for (var j=0;j<contactlength;j++){
+//
+//        var reviewfriendlist = document.createElement("div");
+//        reviewfriendlist.setAttribute("id","reviewfriendlist"+j);
+//
+//        var deletebutton = document.createElement("div");
+//        deletebutton.setAttribute("id", "deletebutton"+j);
+//
+//        var reviewfriendname = document.createElement("div");
+//        reviewfriendname.setAttribute("id", "reviewfriendname"+j);
+//        reviewfriendname.innerHTML=contactDetails.firstName +" "+contactDetails.lastName;
+//
+//
+//        var reviewfriendimage = document.createElement("div");
+//        reviewfriendimage.setAttribute("id", "reviewfriendimage"+j);
+//
+//        reviewfriendlist.appendChild(reviewfriendimage);
+//        reviewfriendlist.appendChild(reviewfriendname);
+//        reviewfriendlist.appendChild(deletebutton);
+//
+//        var baseReviewDiv=document.getElementById("reviewFriends");
+//        baseReviewDiv.appendChild(reviewfriendlist);
+//
+//
+//        alert('blank divs creatin done');
+//
+//   }//end of for loop
+//
+//
+
+	</script>
+	</head>
+    <body>
+
+
+
+
+   <div id="main-wrapper">
+    <div id="header"> <a href="" class="navbutton back"></a> <b>Review</b> 
+        <a class="continue navbutton" onclick="generatePage();"></a> </div>
+    <div id="wrapper">
+    <!-- Review friend row start  -->
+     <div class="div-rev-friend">
+        <div class="rev-FBF-Img "><img src="images/pattern.png"/></div>
+        <div class="rev-friend-div ">
+           <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+
+              <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-corner-top ui-btn-up-c">
+                <div class="ui-btn-inner ui-li ui-corner-top">
+                <div class="ui-btn-text"><a href="#" class="ui-link-inherit">Facebook friend name</a></div>
+                <span class="ui-icon ui-icon-minus" data-theme="c"></span>
+                </div>
+              </li>
+               
+            <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c">
+                <div class="ui-btn-inner ui-li">
+                <div data-role="fieldcontain">
+                <input type="text" name="name" id="name" value=""  />
+                <a href="#" class="ui-link-inherit">Email Address.</a></div>
+              </div>
+            </li>
+  
+            <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-corner-bottom ui-btn-up-c">
+                  <div class="ui-btn-inner ui-li ui-corner-bottom">
+                <div class="ui-btn-text"><a href="#" class="ui-link-inherit">Add Email Address.</a></div>
+                <span class="ui-icon ui-icon-arrow-r"></span></div>
+           </li>
+          </ul>
+            </div>
+      </div>
+          <!-- Review friend row end  -->
+  </div>
+    </div>
+</body>
+</html>
